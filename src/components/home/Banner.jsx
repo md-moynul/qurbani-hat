@@ -15,7 +15,7 @@ const Banner = () => {
           </p>
 
           <div className="flex gap-4">
-            <Link href="#">
+            <Link href="#Featured">
               <Button variant="primary" className="bg-orange-500">
                 Book Now.
               </Button>
@@ -23,7 +23,7 @@ const Banner = () => {
 
             <Link href="/animals">
               <Button variant="outline" className="text-white">
-                See All
+                See All Animals
               </Button>
             </Link>
           </div>

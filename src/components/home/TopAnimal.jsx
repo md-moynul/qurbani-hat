@@ -1,12 +1,18 @@
 import { allData } from "@/lib/data";
+import AnimalCard from "../shared/AnimalCard";
 
 const TopAnimal = async() => {
     const data =await allData()
-    console.log(data);
+    const topAnimal = data.slice(0,8)
+    console.log(topAnimal);
+    
     
     return (
-        <div>
-            
+        <div className="pt-5 space-y-4" id="Featured">
+            <h2 className="text-4xl font-bold">Featured Animals</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                {topAnimal.map(animal => <AnimalCard key={animal.id} animal={animal}/>)}
+            </div>
         </div>
     );
 };
