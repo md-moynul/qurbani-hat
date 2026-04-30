@@ -6,7 +6,7 @@ import {Button, Input, Label, Modal, Surface, TextField} from "@heroui/react";
 export function BuyNow() {
   return (
     <Modal>
-      <Button className={'bg-green-800 w-full'}>Buy Now</Button>
+      <Button className={'bg-green-800 w-full'}>Book Now</Button>
       <Modal.Backdrop variant="blur">
         <Modal.Container placement="auto">
           <Modal.Dialog className="sm:max-w-md">
@@ -27,30 +27,23 @@ export function BuyNow() {
                     <Label>Name</Label>
                     <Input placeholder="Enter your name" />
                   </TextField>
-                  <TextField className="w-full" name="email" type="email">
-                    <Label>Email</Label>
-                    <Input placeholder="Enter your email" />
-                  </TextField>
                   <TextField className="w-full" name="phone" type="tel">
                     <Label>Phone</Label>
                     <Input placeholder="Enter your phone number" />
                   </TextField>
-                  <TextField className="w-full" name="company">
-                    <Label>Company</Label>
-                    <Input placeholder="Enter your company name" />
+                  <TextField className="w-full" name="location">
+                    <Label>Location</Label>
+                    <Input placeholder="Enter your location" />
                   </TextField>
-                  <TextField className="w-full" name="message">
-                    <Label>Message</Label>
-                    <Input placeholder="Enter your message" />
-                  </TextField>
+                
                 </form>
               </Surface>
             </Modal.Body>
             <Modal.Footer>
-              <Button slot="close" variant="secondary">
+              <Button slot="close" className={'text-green-800'} variant="secondary">
                 Cancel
               </Button>
-              <Button slot="close">Send Message</Button>
+              <Button className={'bg-green-800 text-white'} slot="close">Book</Button>
             </Modal.Footer>
           </Modal.Dialog>
         </Modal.Container>
