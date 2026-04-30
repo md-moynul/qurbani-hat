@@ -21,13 +21,13 @@ const Navbar = () => {
                     </div>
                     <h3 className="font-black text-green-800 text-xl">Qurbani Hat</h3>
                 </div>
-                <ul className="flex items-center gap-4">
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/animals">All Animals</Link></li>
+                <ul className="flex items-center gap-4 font-semibold">
+                    <li><NavLinks href="/">Home</NavLinks></li>
+                    <li><NavLinks href="/animals">All Animals</NavLinks></li>
                 </ul>
                 <div className='space-x-2'>
-                    <Button><NavLinks href={'/login'}>Login</NavLinks></Button>
-                    <Button><NavLinks href={'/register'}>Register</NavLinks></Button>
+                    <Button><Link href={'/login'}>Login</Link></Button>
+                    <Button><Link href={'/register'}>Register</Link></Button>
                 </div>
             </header>
         </nav >
