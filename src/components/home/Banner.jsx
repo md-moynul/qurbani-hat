@@ -17,7 +17,7 @@ const Banner = () => {
           <div className="flex gap-4">
             <Link href="#Featured">
               <Button variant="primary" className="bg-orange-500">
-                Book Now.
+                Book Now
               </Button>
             </Link>
 

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const NavLinks = ({href , children , className}) => {
       const pathName = usePathname();
-      console.log(pathName);
+    //   console.log(pathName);
       const isActive = pathName === href;
     
     return (

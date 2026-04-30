@@ -24,6 +24,7 @@ const Navbar = () => {
                 <ul className="flex items-center gap-4 font-semibold">
                     <li><NavLinks href="/">Home</NavLinks></li>
                     <li><NavLinks href="/animals">All Animals</NavLinks></li>
+                    <li><NavLinks href="/profile">Profile</NavLinks></li>
                 </ul>
                 <div className='space-x-2'>
                     <Button><Link href={'/login'}>Login</Link></Button>

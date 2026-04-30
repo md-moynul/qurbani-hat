@@ -37,8 +37,7 @@ const Footer = () => {
                         </div>
 
                         <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400 max-w-xs">
-                            Create production-ready AI visuals in seconds. Built for speed,
-                            scale, and creativity.
+                             QurbaniHat connects you with premium livestock for your Eid-ul-Adha. Select, book, and relax—we handle the rest.
                         </p>
                     </div>
 
@@ -50,18 +49,18 @@ const Footer = () => {
                         <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
                             <li>
                                 <Link
-                                    href="/generate"
+                                    href="#Featured"
                                     className="hover:text-black dark:hover:text-white transition"
                                 >
-                                    Generate
+                                   Buy now
                                 </Link>
                             </li>
                             <li>
                                 <Link
-                                    href="/all-photos"
+                                    href="/animals"
                                     className="hover:text-black dark:hover:text-white transition"
                                 >
-                                    Gallery
+                                    All Animals
                                 </Link>
                             </li>
                             <li>
@@ -115,13 +114,13 @@ const Footer = () => {
                         </h3>
 
                         <p className="text-sm text-gray-600 dark:text-gray-400">
-                            Generate your first AI image today.
+                           The Smartest Way to Book Your Qurbani.
                         </p>
 
                         <Link
-                            href="/signup"
+                            href="/register"
                             className="inline-flex items-center justify-center px-5 py-2.5 rounded-full 
-              bg-black text-white dark:bg-white dark:text-black 
+              bg-green-800 text-white
               text-sm font-medium transition-all duration-200 
               hover:scale-[1.02] hover:shadow-lg hover:shadow-black/10 dark:hover:shadow-white/10"
                         >
@@ -135,7 +134,7 @@ const Footer = () => {
 
                 {/* Bottom */}
                 <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
-                    <p>© {new Date().getFullYear()} pixgen. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} qurbani-hat. All rights reserved.</p>
 
                     <div className="flex items-center gap-6">
                         <Link
