@@ -24,7 +24,7 @@ export default function RegisterPage() {
         })
         if (data){
             alert('Sign In successful')
-            router.push('/')
+            router.push('/login')
         }
         if(error){
             alert(`${error.message}`)
@@ -42,7 +42,7 @@ export default function RegisterPage() {
                     <Label>Name</Label>
                     <Input placeholder="Enter your name" />
                 </TextField>
-                <TextField isRequired className="w-full " name="image">
+                <TextField className="w-full " name="image" type="url">
                     <Label>Image URL</Label>
                     <Input placeholder="Enter image url" />
                 </TextField>
@@ -90,7 +90,7 @@ export default function RegisterPage() {
                     <span onClick={() => { setIsVisible(!isVisible) }} className="absolute top-8 right-3 cursor-pointer">{isVisible ? <Eye className="size-5" /> : <EyeSlash className="size-5" />}</span>
                 </TextField>
                 <Button className={'w-full'} type="submit">Login</Button>
-                <p className="text-center text-gray-500 ">Already Have An Account ? <span className="text-red-500 cursor-pointer font-bold"><Link href={'/login'}>login</Link></span></p>
+                <p className="text-center text-gray-500 ">Already Have An Account ? <span className="text-red-500 cursor-pointer font-bold"><Link href={'/login'}>Login</Link></span></p>
                 <LoginWith/>
             </Form>
         </div >
