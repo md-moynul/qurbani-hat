@@ -26,11 +26,11 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} light `}
     >
       <body className="bg-background text-foreground">
-        <main>
         <Navbar/>
+        <main className="px-5 md:px-0">
         {children}
-        <Footer/>
         </main>
+        <Footer/>
         </body>
     </html>
   );
