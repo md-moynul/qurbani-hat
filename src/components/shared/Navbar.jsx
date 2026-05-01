@@ -50,11 +50,11 @@ const Navbar = () => {
                                 className='rounded-full'/> */}
                             <Avatar>
                                 <Avatar.Image
-                                    alt={user.name}
+                                    alt={user?.name}
                                     src={user?.image}
                                     referrerPolicy='no-referrer'
                                 />
-                                <Avatar.Fallback>{user.name[0]}</Avatar.Fallback>
+                                <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
                             </Avatar>
                             <Button variant='danger-soft' onClick={handelLogout}>
                                 <FiLogOut />
