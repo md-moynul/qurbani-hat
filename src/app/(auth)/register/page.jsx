@@ -1,5 +1,6 @@
 "use client";
 
+import LoginWith from "@/components/shared/LoginWith";
 import { authClient } from "@/lib/auth-client";
 import { Eye, EyeSlash } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
@@ -90,6 +91,7 @@ export default function RegisterPage() {
                 </TextField>
                 <Button className={'w-full'} type="submit">Login</Button>
                 <p className="text-center text-gray-500 ">Already Have An Account ? <span className="text-red-500 cursor-pointer font-bold"><Link href={'/login'}>login</Link></span></p>
+                <LoginWith/>
             </Form>
         </div >
     );

@@ -4,7 +4,7 @@ import AnimalCard from "../shared/AnimalCard";
 const TopAnimal = async() => {
     const data =await allData()
     const topAnimal = data.slice(0,8)
-    console.log(topAnimal);
+    // console.log(topAnimal);
     
     
     return (

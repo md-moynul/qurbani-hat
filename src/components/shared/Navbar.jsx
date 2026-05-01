@@ -1,10 +1,16 @@
+"use client"
 import { Button } from '@heroui/react';
 import Link from 'next/link';
 import React from 'react';
 import NavLinks from './NavLinks';
 import Image from 'next/image';
+import { authClient } from '@/lib/auth-client';
 
 const Navbar = () => {
+    const { data: session,isPending } = authClient.useSession()
+    const user = session?.user;
+    console.log(user);
+    
     return (
         <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
             <header className="flex h-16 items-center justify-between px-6">
