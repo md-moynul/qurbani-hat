@@ -22,14 +22,14 @@ const LoginWith = () => {
                     <FcGoogle size={25} />
                     <p>Login with Google</p>
                 </Button>
-                <Button onClick={handelGithubSignIn} variant='outline' className='flex gap-2 items-center  w-full '>
+                {/* <Button onClick={handelGithubSignIn} variant='outline' className='flex gap-2 items-center  w-full '>
                     <FaGithub size={25} />
                     <p>Login with Github</p>
                 </Button>
                 <Button variant='outline' className='flex gap-2 items-center text-blue-500 w-full'>
                     <FaFacebook size={25} />
                     <p>Login with Facebook</p>
-                </Button>
+                </Button> */}
             </div>
         </div>
     );

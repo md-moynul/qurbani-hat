@@ -3,3 +3,8 @@ export const allData = async () => {
     const data =  await res.json()
     return data
 }
+export const getCategory = async() => {
+    const res = await fetch('http://localhost:3000/category.json')
+    const data = await res.json()
+    return data
+}

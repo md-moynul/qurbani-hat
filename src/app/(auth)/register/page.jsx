@@ -37,7 +37,7 @@ export default function RegisterPage() {
                 className="flex flex-col space-y-4 shadow p-5 pb-10 rounded-2xl mx-auto w-md"
                 onSubmit={onSubmit}
             >
-                <Label className="text-center font-bold text-3xl">Please Signin</Label>
+                <Label className="text-center font-bold text-3xl">Please Register</Label>
                 <TextField isRequired className="w-full " name="name">
                     <Label>Name</Label>
                     <Input placeholder="Enter your name" />
