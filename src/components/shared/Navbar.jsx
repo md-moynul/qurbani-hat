@@ -8,13 +8,16 @@ import { authClient } from '@/lib/auth-client';
 import { FiLogOut } from 'react-icons/fi';
 import { TiThMenu } from 'react-icons/ti';
 import { IoMdClose } from 'react-icons/io';
+import { redirect } from 'next/navigation';
 
 const Navbar = () => {
     const [status, setStatus] = useState(false)
+
     const { data, isPending } = authClient.useSession()
     const user = data?.user;
     const handelLogout = async () => {
         await authClient.signOut();
+        redirect('/login')
     }
     const links = <>
         <li><NavLinks href="/">Home</NavLinks></li>

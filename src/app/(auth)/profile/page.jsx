@@ -35,10 +35,10 @@ const ProfilePage = () => {
                         src={user?.image}
                         referrerPolicy='no-referrer'
                     />
-                    <Avatar.Fallback className='text-5xl'>{user.name[0]}</Avatar.Fallback>
+                    <Avatar.Fallback className='text-5xl'>{user?.name[0]}</Avatar.Fallback>
                 </Avatar>
-                <h2 className='text-2xl font-bold '>Name : {user.name}</h2>
-                <h2 className=' '>Email : {user.email}</h2>
+                <h2 className='text-2xl font-bold '>Name : {user?.name}</h2>
+                <h2 className=' '>Email : {user?.email}</h2>
                 <div className='flex justify-center'>
 
                     <EditProfile />
