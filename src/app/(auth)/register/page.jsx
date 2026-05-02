@@ -23,11 +23,11 @@ export default function RegisterPage() {
             image,
         })
         if (data){
-            alert('Sign In successful')
+            toast.success('Sign In successful')
             router.push('/login')
         }
         if(error){
-            alert(`${error.message}`)
+            toast.error(`${error.message}`)
         }
     }
 

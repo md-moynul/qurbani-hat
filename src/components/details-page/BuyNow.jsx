@@ -5,7 +5,7 @@ import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
 
 export function BuyNow() {
   const onSubmit= () =>{
-    alert('Booking successful')
+    toast.success('Booking successful')
   }
   return (
     <Modal>

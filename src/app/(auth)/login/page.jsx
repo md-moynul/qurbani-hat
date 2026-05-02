@@ -6,6 +6,7 @@ import {  Eye, EyeSlash } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import Link from "next/link";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function LoginPage() {
 
@@ -21,10 +22,10 @@ export default function LoginPage() {
 
         })
         if(data){
-            alert('login successful')
+            toast.success('login successful')
         }
         if(error){
-           alert(`${error.message}`)
+           toast.error(`${error.message}`)
         }
     };
 
