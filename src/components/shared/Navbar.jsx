@@ -19,7 +19,7 @@ const Navbar = () => {
     const links = <>
         <li><NavLinks href="/">Home</NavLinks></li>
         <li><NavLinks href="/animals">All Animals</NavLinks></li>
-        <li><NavLinks href="/my-profile">Profile</NavLinks></li>
+        <li><NavLinks href="/profile">Profile</NavLinks></li>
     </>
     return (
         <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
