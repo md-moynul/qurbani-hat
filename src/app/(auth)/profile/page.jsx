@@ -2,9 +2,7 @@
 
 import { authClient } from '@/lib/auth-client';
 import { Avatar, Card, Spinner } from '@heroui/react';
-import Image from 'next/image';
 import React from 'react';
-import logo from '@/assets/user.png'
 import EditProfile from '@/components/profile/EditProfile';
 
 const ProfilePage = () => {
