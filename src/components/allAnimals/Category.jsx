@@ -10,7 +10,7 @@ const Category = async () => {
         <div className='flex flex-wrap gap-2'>
             <ButtonCategory  href={`?category${''}`}>All</ButtonCategory>
            
-            {data.map(c => <ButtonCategory key={c.id} href={`?category${c.name}`}>{c.name}</ButtonCategory>)}
+            {data.map(c => <ButtonCategory key={c.id} href={`?category=${c.name}`}>{c.name}</ButtonCategory>)}
 
         </div>
     );

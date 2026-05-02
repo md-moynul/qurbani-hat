@@ -5,13 +5,9 @@ import { allData } from '@/lib/data';
 import React from 'react';
 
 const AnimalsPage = async ({ searchParams }) => {
-    const search = await searchParams;
-    const { category, sort } = search
-    console.log(category, sort);
-
+    const { category, sort } = await searchParams;
     const data = await allData()
-    console.log(category);
-
+    
     let filteredData =
         category
             ? data.filter(
