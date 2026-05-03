@@ -24,12 +24,12 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      data-theme='light'
-      className={`${geistSans.variable} ${geistMono.variable} light `}
+     suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable} `}
     >
-      <body className="bg-background text-foreground">
+      <body className="bg-background text-foreground  transition-all duration-500 ">
         <Navbar/>
-        <main className="px-5 md:px-0">
+        <main className="px-5 lg:px-0">
           <ToastContainer />
         {children}
         </main>

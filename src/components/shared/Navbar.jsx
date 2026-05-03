@@ -9,6 +9,7 @@ import { FiLogOut } from 'react-icons/fi';
 import { TiThMenu } from 'react-icons/ti';
 import { IoMdClose } from 'react-icons/io';
 import { redirect } from 'next/navigation';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
     const [status, setStatus] = useState(false)
@@ -52,7 +53,7 @@ const Navbar = () => {
                 <ul className="hidden md:flex items-center gap-4 font-semibold ">
                     {links}
                 </ul>
-                <div className='space-x-2'>
+                <div className='space-x-2 flex'>
                     {isPending ? <div className="flex items-center gap-4">
                         <Spinner />
                     </div> :
@@ -80,6 +81,7 @@ const Navbar = () => {
                             <Button><Link href={'/login'}>Login</Link></Button>
                             <Button><Link href={'/register'}>Register</Link></Button>
                         </div>}
+                        <ThemeToggle/>
                 </div>
             </header>
         </nav >

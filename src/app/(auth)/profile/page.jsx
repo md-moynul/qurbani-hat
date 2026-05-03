@@ -12,7 +12,7 @@ const ProfilePage = () => {
 
     if (isPending) {
         return (
-            <div className="flex items-center gap-4 min-h-[60vh] justify-center">
+            <div className="flex items-center gap-4 min-h-[60vh] justify-center ">
                 <Spinner size='50' />
             </div>
         )

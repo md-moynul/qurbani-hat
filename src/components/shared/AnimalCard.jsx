@@ -7,7 +7,8 @@ import { TbCurrencyTaka } from "react-icons/tb";
 const AnimalCard = ({ animal }) => {
     return (
         <div>
-            <Card className="rounded-xl">
+            <Card className="rounded-xl hover:shadow-2xl shadow shadow-green-200
+             hover:shadow-emerald-400  hover:scale-101 transition-all duration-500 ">
                 <div className="relative w-full aspect-square">
                     <Image
                         src={animal.image}

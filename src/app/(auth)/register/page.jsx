@@ -32,9 +32,9 @@ export default function RegisterPage() {
     }
 
     return (
-        <div className="min-h-[75vh] flex items-center" >
+        <div className="min-h-[75vh] flex items-center pt-15" >
             <Form
-                className="flex flex-col space-y-4 shadow p-5 pb-10 rounded-2xl mx-auto w-md"
+                className="flex flex-col space-y-4 shadow  p-5 pb-10 rounded-2xl mx-auto w-md hover:shadow-2xl hover:shadow-emerald-400  hover:scale-101 transition-all duration-500 shadow-green-300"
                 onSubmit={onSubmit}
             >
                 <Label className="text-center font-bold text-3xl">Please Register</Label>
@@ -89,7 +89,7 @@ export default function RegisterPage() {
                     <FieldError />
                     <span onClick={() => { setIsVisible(!isVisible) }} className="absolute top-8 right-3 cursor-pointer">{isVisible ? <Eye className="size-5" /> : <EyeSlash className="size-5" />}</span>
                 </TextField>
-                <Button className={'w-full'} type="submit">Login</Button>
+                <Button className={'w-full'} type="submit">Register</Button>
                 <p className="text-center text-gray-500 ">Already Have An Account ? <span className="text-red-500 cursor-pointer font-bold"><Link href={'/login'}>Login</Link></span></p>
                 <LoginWith/>
             </Form>

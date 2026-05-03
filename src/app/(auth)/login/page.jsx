@@ -32,7 +32,7 @@ export default function LoginPage() {
     return (
         <div className="min-h-[75vh] flex items-center" >
             <Form
-                className="flex flex-col space-y-4 shadow p-5 pb-10 rounded-2xl mx-auto w-md"
+                className="flex flex-col space-y-4 shadow p-5 pb-10 rounded-2xl mx-auto w-md  hover:shadow-2xl hover:shadow-emerald-400  hover:scale-101 transition-all duration-500 shadow-green-300"
                 onSubmit={onSubmit}
             >
                 <Label className="text-center font-bold text-3xl">Please login</Label>

@@ -1,8 +1,8 @@
 import { BuyNow } from '@/components/details-page/BuyNow';
 import { allData } from '@/lib/data';
-import { Button, Card } from '@heroui/react';
+import {  Card } from '@heroui/react';
 import Image from 'next/image';
-import Link from 'next/link';
+
 import React from 'react';
 import { TbCurrencyTaka } from 'react-icons/tb';
 
@@ -21,13 +21,14 @@ const DetailsPage = async ({ params }) => {
     return (
         <div className='py-10'>
             <div className='max-w-xl mx-auto '>
-                <Card className="rounded-xl p-8 space-y-2">
-                    <div className="relative w-[60%] mx-auto aspect-square">
+                <Card className="rounded-xl p-8 space-y-2  hover:shadow-2xl hover:shadow-emerald-400  hover:scale-101 transition-all duration-500  shadow shadow-green-200
+             ">
+                    <div className="relative w-[60%] mx-auto aspect-square ">
                         <Image
                             src={animal.image}
                             alt={`${animal.name} `}
                             fill
-                            className="object-center rounded-xl w-full"
+                            className="object-center rounded-xl w-full "
                         />
                     </div>
                     <Card.Header>
@@ -42,9 +43,9 @@ const DetailsPage = async ({ params }) => {
                         <p className="">Age : {animal.age} Years</p>
                         <p className=" ">Breed : {animal.breed}</p>
                     </div>
-                     <p className=" ">Location :<span className='font-bold'> {animal.location}</span></p>
+                    <p className=" ">Location :<span className='font-bold'> {animal.location}</span></p>
                     <div>
-                        <BuyNow/>
+                        <BuyNow />
                     </div>
                 </Card>
             </div>
