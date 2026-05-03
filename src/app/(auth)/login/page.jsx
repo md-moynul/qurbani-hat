@@ -5,11 +5,12 @@ import { authClient } from "@/lib/auth-client";
 import {  Eye, EyeSlash } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
 export default function LoginPage() {
-
+    const router = useRouter()
     const [isVisible, setIsVisible] = useState(false)
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -18,11 +19,11 @@ export default function LoginPage() {
         const { data, error } = await authClient.signIn.email({
             email,
             password,
-            callbackURL: "/",
 
         })
         if(data){
             toast.success('login successful')
+             router.push('/')
         }
         if(error){
            toast.error(`${error.message}`)

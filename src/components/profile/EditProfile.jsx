@@ -3,6 +3,7 @@
 import { authClient } from "@/lib/auth-client";
 import { PencilToSquare } from "@gravity-ui/icons";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
+import { toast } from "react-toastify";
 
 
 export default function EditProfile() {
@@ -12,10 +13,16 @@ export default function EditProfile() {
         const {name , image} = Object.fromEntries(formdata.entries())
         // console.log(name ,image);
         
-        await authClient.updateUser({
+       const { data, error }= await authClient.updateUser({
             image,
             name,
         })
+        if(data){
+            toast.success('Update successful')
+        }
+        if(error){
+            toast.error(error.message)
+        }
     }
     return (
         <Modal>

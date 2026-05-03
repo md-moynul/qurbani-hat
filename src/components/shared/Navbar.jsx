@@ -10,6 +10,7 @@ import { TiThMenu } from 'react-icons/ti';
 import { IoMdClose } from 'react-icons/io';
 import { redirect } from 'next/navigation';
 import ThemeToggle from './ThemeToggle';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const [status, setStatus] = useState(false)
@@ -18,6 +19,7 @@ const Navbar = () => {
     const user = data?.user;
     const handelLogout = async () => {
         await authClient.signOut();
+            toast.info('Logout Successful')
         redirect('/login')
     }
     const links = <>
@@ -30,24 +32,24 @@ const Navbar = () => {
             <header className="flex h-16 items-center justify-between px-6">
                 <div className="flex items-center gap-1">
                     <div className='md:hidden cursor-pointer' onClick={() => setStatus(!status)}>
-                        {status ?  <IoMdClose size={30}  /> : <TiThMenu size={30}  />}
-                       
+                        {status ? <IoMdClose size={30} /> : <TiThMenu size={30} />}
+
                     </div>
                     <ul className={`z-10  font-semibold  space-y-3 md:hidden bg-background/70 backdrop-blur-lg p-3 absolute duration-1000 ${status ? 'top-15 left-0 ' : 'top-15  -left-50'} `}>
                         {links}
                     </ul>
                     <div className='hidden md:flex items-center gap-1 '>
-                    <div className="w-12 h-12  bg-green-800  rounded-full flex items-center justify-center">
-                        <Image
-                            src={"/logo.png"}
-                            alt="logo"
-                            loading="eager"
-                            width={30}
-                            height={30}
-                            className="object-cover h-auto w-auto "
-                        />
-                    </div>
-                    <h3 className="font-black text-green-800 text-lg md:text-xl">Qurbani Hat</h3>
+                        <div className="w-12 h-12  bg-green-800  rounded-full flex items-center justify-center">
+                            <Image
+                                src={"/logo.png"}
+                                alt="logo"
+                                loading="eager"
+                                width={30}
+                                height={30}
+                                className="object-cover h-auto w-auto "
+                            />
+                        </div>
+                        <h3 className="font-black text-green-800 text-lg md:text-xl">Qurbani Hat</h3>
                     </div>
                 </div>
                 <ul className="hidden md:flex items-center gap-4 font-semibold ">
@@ -66,14 +68,16 @@ const Navbar = () => {
                                 width={30}
                                 height={30} 
                                 className='rounded-full'/> */}
-                            <Avatar>
-                                <Avatar.Image
-                                    alt={user?.name}
-                                    src={user?.image}
-                                    referrerPolicy='no-referrer'
-                                />
-                                <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
-                            </Avatar>
+                            <Link href={'/profile'}>
+                                <Avatar >
+                                    <Avatar.Image
+                                        alt={user?.name}
+                                        src={user?.image}
+                                        referrerPolicy='no-referrer'
+                                    />
+                                    <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+                                </Avatar>
+                            </Link>
                             <Button variant='danger-soft' onClick={handelLogout}>
                                 <FiLogOut />
                             </Button>
@@ -81,7 +85,7 @@ const Navbar = () => {
                             <Button><Link href={'/login'}>Login</Link></Button>
                             <Button><Link href={'/register'}>Register</Link></Button>
                         </div>}
-                        <ThemeToggle/>
+                    <ThemeToggle />
                 </div>
             </header>
         </nav >

@@ -2,9 +2,11 @@
 
 import { CircleInfoFill } from "@gravity-ui/icons";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
+import { toast } from "react-toastify";
 
 export function BuyNow() {
-  const onSubmit= () =>{
+  const onSubmit= (e) =>{
+    e.preventDefault();
     toast.success('Booking successful')
   }
   return (
