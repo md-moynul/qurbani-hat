@@ -1,12 +1,13 @@
 "use client";
 
 import { Moon, Sun } from "@gravity-ui/icons";
-import { Switch, useTheme } from "@heroui/react";
+import { Switch } from "@heroui/react";
+import { useTheme } from "next-themes";
 
 const ThemeToggle = () => {
     const { theme, setTheme } = useTheme()
     return (
-        <Switch  onChange={() => setTheme(theme === "dark" ? "light" : "dark")}>
+        <Switch  onChange={() => setTheme(theme === "light" ? "dark" : "light")}>
             {({ isSelected }) => (
                 <>
                     <Switch.Control
